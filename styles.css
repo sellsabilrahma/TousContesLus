@@ -15,29 +15,43 @@ body {
 .navbar {
     position: fixed;
     top: 0;
+    left: 0; 
     background-color: beige;
     border-bottom: 1px solid wheat;
     width: 100%;
     height: 70px;
-    padding-bottom: 0px 60px;
+    padding: 0 60px; 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 
-.navbar img {
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    height: 100%; 
+}
+
+.navbar-logo img {
     height: 100%;
+    width: auto;
 }
 
-.navbar h1 {
+.navbar-logo h1 {
     color: black;
+    margin: 0; 
+    font-size: 24px; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .navbar-menu {
     list-style: none;
     display: flex;
     gap: 32px;
+    margin: 0; 
+    padding: 0;
 }
 
 .navbar-menu a {
@@ -46,6 +60,7 @@ body {
     font-size: 16px;
     font-weight: 500;
 }
+
 
 /*=== HERO ===*/
 .hero {
