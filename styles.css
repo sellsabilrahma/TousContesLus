@@ -22,8 +22,9 @@ body {
     padding-bottom: 0px 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
+
 
 .navbar img {
     height: 100%;
@@ -164,7 +165,7 @@ body {
 /* == FOOTER ==*/
 
 footer {
-    background-color: #004151;
+    background-color: #003543;
     padding: 40px 60px;
     display: flex;
     align-items: center;
@@ -198,7 +199,7 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: white;
+    color: beige;
 }
 
 .social-icons {
@@ -207,7 +208,7 @@ footer {
 }
 
 .social-icons img {
-    background-color: white;
+    background-color: beige;
     border-radius: 5px;
     padding: 5px;
     width: 32px;
