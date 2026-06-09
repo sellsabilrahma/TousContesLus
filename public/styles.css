@@ -412,4 +412,145 @@ footer {
     padding: 40px 0 !important;
 }
 
+/* ==========================================================
+   3. DESIGN DE LA PAGE CONTACT (À METTRE TOUT EN BAS)
+   ========================================================== */
+
+/* Conteneur principal décalé pour la navbar fixe */
+.contact-container {
+    margin-top: 120px;
+    padding: 0 60px 60px 60px;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Organisation en deux colonnes (Formulaire à gauche, Infos à droite) */
+.contactUs {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    max-width: 1100px;
+    background-color: beige; /* Même beige que tes cartes */
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Styles communs pour les titres et lignes de séparation de la page contact */
+.contactUs h1 {
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 24px;
+    color: rgb(174, 38, 14); /* Ton rouge signature */
+    margin-bottom: 10px;
+}
+
+.contactUs hr {
+    border: 0;
+    height: 2px;
+    background-color: orange;
+    margin-bottom: 25px;
+    width: 100px;
+}
+
+/* Bloc Formulaire */
+.contact-form-block {
+    flex: 1.2;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: black;
+    font-size: 15px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: orange;
+}
+
+/* Bouton Envoyer */
+.submit-btn {
+    background-color: rgb(174, 38, 14);
+    color: gold;
+    border: none;
+    padding: 14px 35px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    width: fit-content;
+}
+
+.submit-btn:hover {
+    background-color: #8c1a07;
+    transform: translateY(-2px);
+}
+
+/* Bloc Infos à droite */
+.contact-info-block {
+    flex: 0.8;
+    background-color: #fcf8ee;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid wheat;
+    height: fit-content;
+}
+
+.contact-info-block h1 {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.contact-info-block h1:first-child {
+    margin-top: 0;
+}
+
+.contact-info-block p {
+    font-size: 16px;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.contact-info-block i {
+    color: orange;
+    margin-right: 8px;
+}
+
+/* Version mobile responsive */
+@media (max-width: 768px) {
+    .contactUs {
+        flex-direction: column !important;
+        padding: 20px;
+    }
+    .contact-container {
+        padding: 0 20px 40px 20px;
+    }
+}
+
+
 

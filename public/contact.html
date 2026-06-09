@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>Tous Contes Lus - Contact</title>
+</head>
+<body>
+    
+    <!-- Navbar (Identique aux autres pages) -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="images/logo.jpg" alt="Logo">
+            <h1>Tous Contes Lus</h1>
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li>
+                <a href="#">
+                    <i class="fa-solid fa-shopping-basket"></i> Panier (0)
+                </a>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteneur principal adapté à ta navbar fixe -->
+    <main class="contact-container">
+        <section class="contactUs">
+            
+            <!-- Bloc Formulaire (À gauche) -->
+            <div class="contact-form-block">
+                <h1>Nous contacter</h1>
+                <hr>
+                <!-- UN SEUL FORMULAIRE ICI -->
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="nom1">Nom :</label>
+                        <input type="text" id="nom1" name="nom1" placeholder="Votre nom">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email :</label> 
+                        <input type="email" id="email" name="email6" required placeholder="champ obligatoire (ex@mail.com)">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Votre message..."></textarea>
+                    </div>
+                    
+                    <input type="submit" value="Envoyer" class="submit-btn">
+                </form>
+            </div>
+
+            <!-- Bloc Informations de la bibliothèque (À droite) -->
+            <div class="contact-info-block">
+                <h1>VISITEZ NOS LOCAUX</h1>
+                <hr>
+                <p class="address-text"><i class="fa-solid fa-map-marker-alt"></i> El Achour / ALGER</p>
+                
+                <h1>SUPPORT ET INFORMATIONS</h1>
+                <hr>
+                <p class="phone-text"><i class="fa-solid fa-phone"></i> Tél : 0554759907</p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <img src="images/logo.jpg" alt="Logo"> 
+            <p>© 2026 Tous Contes Lus. Tous droits réservés.</p>
+        </div>
+        <div class="footer-right">
+            <h3>Suivez-nous sur nos réseaux sociaux</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/Tous-contes-lus-100094260133410/" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/tousconteslus16/" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
