@@ -229,4 +229,98 @@ footer {
     width: 32px;
     height: 32px;
 }
-    
+  
+/* SHOP ALL PAGE*/
+
+.explore {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    min-width: 700px;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.dropdown {
+    position: relative;
+    width: 280px;
+    background-color: rgb(221, 169, 38);
+    border-radius: 50px;
+    border: 1px solid #fff;
+    box-shadow: #aaaaaa;
+    cursor: pointer;
+}
+
+.dropdown-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding: 1rem 1.5rem;
+}
+
+.dropdown-list {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    width: 100%;
+    border-radius: 15px;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    transition: max-height 0.5s;
+}
+
+.list-show {
+    max-height: 300px;
+}
+
+.dropdown-list-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 1rem 0 1rem 1.5rem;
+    cursor: pointer;
+    transition: margin-left 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-list-item:hover {
+    margin-left: 0.5rem;
+    color: rgb(174, 38, 14);
+} 
+.search-box {
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+    width: 100%;
+    color: white;
+}
+
+.search-box input {
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    border: 0;
+    outline: 0;
+}
+
+.search-box i {
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: black;
+}
+
+.search-box input::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+}
