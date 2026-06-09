@@ -1,26 +1,36 @@
-let dropdownBtn = document.getElementById("drop-text");
-let list = document.getElementById("list");
-let icon = document.getElementById("icon");
-let span = document.getElementById("span");
-let input = document.getElementById("search-input");
-let listItems = document.querySelectorAll(".dropdown-list-item");
+// 1. Sélection des éléments HTML
+const dropdownBtn = document.getElementById("drop-text");
+const list = document.getElementById("list");
+const icon = document.getElementById("icon");
+const span = document.getElementById("span");
+const input = document.getElementById("search-input");
+const listItems = document.querySelectorAll(".dropdown-list-item");
+const container = document.getElementById("results-container");
 
-// Variable globale pour stocker le filtre actif (par défaut : ALL)
+// 2. Variables d'état globales
 let currentFilter = "ALL";
+let books = []; // Contiendra les données chargées depuis le JSON
 
-// Exemple de données 
-//const books = [
-   // { title: "Le Petit Prince", category: "Contes" },
-   // { title: "L'Étranger", category: "Romans" },
-  //  { title: "Béni ou le Paradis Privé", category: "Romans" },
-   // { title: "Manuel d'Arabe", category: "Langues" },
-   // { title: "Mathématiques Terminale", category: "Scolaire" }
-//];
+// 3. Chargement asynchrone des données du fichier JSON
+async function loadBooksData() {
+    try {
+        const response = await fetch("books.json"); 
+        if (!response.ok) {
+            throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
+        }
+        books = await response.json(); 
+        filterBooks(); // Affiche tous les livres au premier chargement
+    } catch (error) {
+        console.error("Impossible de charger les livres :", error);
+        container.innerHTML = "<p class='error'>Erreur lors du chargement des livres.</p>";
+    }
+}
 
-// 1. Gestion de l'ouverture/fermeture du menu
-dropdownBtn.onclick = function(e){
-    e.stopPropagation(); // Empêche window.onclick de se déclencher immédiatement
-    if(list.classList.contains("list-show")) {
+// 4. Gestion de l'ouverture / fermeture du menu déroulant
+dropdownBtn.onclick = function(e) {
+    e.stopPropagation(); // Empêche la fermeture immédiate via window.onclick
+    
+    if (list.classList.contains("list-show")) {
         icon.style.rotate = "0deg";
     } else {
         icon.style.rotate = "-180deg";
@@ -28,65 +38,67 @@ dropdownBtn.onclick = function(e){
     list.classList.toggle("list-show");
 };
 
-// 2. Gestion du clic sur les éléments du filtre
+// 5. Gestion de la sélection d'un filtre dans la liste
 listItems.forEach(item => {
     item.onclick = function() {
-        currentFilter = this.textContent.trim(); // Récupère le texte (ex: "Romans")
-        span.textContent = currentFilter; // Change le texte du bouton principal
+        currentFilter = this.textContent.trim(); // Récupère le nom du filtre (ex: "Romans")
+        span.textContent = currentFilter;        // Met à jour le texte affiché dans le bouton
         
-        // Ferme le menu proprement
+        // Ferme proprement le menu déroulant
         list.classList.remove("list-show");
         icon.style.rotate = "0deg";
         
-        // Lance la recherche filtrée
-        filterBooks();
+        filterBooks(); // Relance le filtrage
     };
 });
 
-// 3. Fermer le menu si on clique n'importe où ailleurs sur la page
-window.onclick = function (e) {
+// 6. Fermeture du menu si on clique n'importe où ailleurs sur la page
+window.onclick = function(e) {
     if (!dropdownBtn.contains(e.target) && !list.contains(e.target)) {
         list.classList.remove("list-show");
         icon.style.rotate = "0deg";
     }
 };
 
-// 4. Gestion de la saisie au clavier dans la barre de recherche
+// 7. Filtrage en temps réel lors de la saisie dans la barre de recherche
 input.oninput = function() {
     filterBooks();
 };
 
-// 5. Fonction principale de filtrage et d'affichage
+// 8. Logique de filtrage croisé (Texte + Catégorie)
 function filterBooks() {
-    let searchText = input.value.toLowerCase();
+    const searchText = input.value.toLowerCase();
     
-    // Filtre les livres selon le texte ET la catégorie sélectionnée
-    let filtered = books.filter(book => {
-        let matchesCategory = (currentFilter === "ALL" || book.category === currentFilter);
-        let matchesText = book.title.toLowerCase().includes(searchText);
+    const filtered = books.filter(book => {
+        const matchesCategory = (currentFilter === "ALL" || book.category === currentFilter);
+        const matchesText = book.title.toLowerCase().includes(searchText);
         return matchesCategory && matchesText;
     });
 
     displayResults(filtered);
 }
 
-// 6. Injection des résultats dans le HTML
+// 9. Génération et injection des cartes HTML
 function displayResults(results) {
-    let container = document.getElementById("results-container");
-    container.innerHTML = ""; // Vide la zone de résultats précédente
+    container.innerHTML = ""; // Vide le conteneur avant d'ajouter les nouveaux résultats
 
-    if(results.length === 0) {
+    if (results.length === 0) {
         container.innerHTML = "<p class='no-result'>Aucun livre trouvé</p>";
         return;
     }
 
     results.forEach(book => {
-        let bookDiv = document.createElement("div");
-        bookDiv.className = "book-card";
-        bookDiv.innerHTML = `<h3>${book.title}</h3><p>Catégorie : ${book.category}</p>`;
+        const bookDiv = document.createElement("div");
+        bookDiv.className = "card"; // Reprend ta classe CSS d'origine
+        
+        bookDiv.innerHTML = `
+            <img src="${book.image}" alt="Card Image">
+            <h3>${book.title}</h3>
+            <button>Shop Now</button>
+        `;
         container.appendChild(bookDiv);
     });
 }
 
-// Optionnel : Afficher tous les livres dès le chargement de la page
-filterBooks();
+// 10. Initialisation au démarrage du site
+loadBooksData();

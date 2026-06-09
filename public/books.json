@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "The Final Gambit",
+    "image": "images/bookone.png",
+    "category": "Romans"
+  },
+  {
+    "id": 2,
+    "title": "The Hawthorne Legacy",
+    "image": "images/booktwo.png",
+    "category": "Romans"
+  },
+  {
+    "id": 3,
+    "title": "The Brothers Hawthorne",
+    "image": "images/bookthree.png",
+    "category": "Romans"
+  },
+  {
+    "id": 4,
+    "title": "100 Faits étonnants sur le CORPS HUMAINS",
+    "image": "images/bookfour.png",
+    "category": "Scolaire"
+  },
+  {
+    "id": 5,
+    "title": "100 Mystères et Découvertes",
+    "image": "images/bookfive.png",
+    "category": "Scolaire"
+  },
+  {
+    "id": 6,
+    "title": "100 faits exceptionnels sur la PLANETE TERRE",
+    "image": "images/booksix.png",
+    "category": "Scolaire"
+  },
+  {
+    "id": 7,
+    "title": "Les Contes de Beedle le Barde",
+    "image": "images/bookseven.png",
+    "category": "Contes"
+  },
+  {
+    "id": 8,
+    "title": "Ulysse aux mille ruses",
+    "image": "images/bookeight.png",
+    "category": "Romans"
+  },
+  {
+    "id": 9,
+    "title": "Tirez pas sur le scarabée !",
+    "image": "images/booknine.png",
+    "category": "Romans"
+  },
+  {
+    "id": 10,
+    "title": "The Soup Movement",
+    "image": "images/bookten.png",
+    "category": "Langues"
+  },
+  {
+    "id": 11,
+    "title": "Livre Anglais Débutant",
+    "image": "images/bookeleven.png",
+    "category": "Langues"
+  },
+  {
+    "id": 12,
+    "title": "Livre Enfant 6-9 ans",
+    "image": "images/booktwelev.png",
+    "category": "Age"
+  },
+  {
+    "id": 13,
+    "title": "Livre Enfant Ados",
+    "image": "images/booktherteen.png",
+    "category": "Age"
+  },
+  {
+    "id": 14,
+    "title": "Les Poupées Russes",
+    "image": "images/bookfourteen.png",
+    "category": "Contes"
+  },
+  {
+    "id": 15,
+    "title": "Blanche-Neige et Les Sept Nains",
+    "image": "images/bookfifteen.png",
+    "category": "Contes"
+  },
+  {
+    "id": 16,
+    "title": "Cendrillon",
+    "image": "images/booksixteen.png",
+    "category": "Contes"
+  }
+]

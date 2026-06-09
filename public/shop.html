@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +9,15 @@
 </head>
 <body>
     
-</body>
-<!--navbar -->
   <nav class="navbar">
     <div class="navbar-logo">
-        <img src="images/logo.jpg" alt="">
+        <img src="images/logo.jpg" alt="Logo">
         <h1>Tous Contes Lus</h1>
     </div>
 
     <ul class="navbar-menu">
         <li><a href="main.html">Accueil</a></li>
-        <li><a href="shop.html">
-            Shop
-            <!--<i id="icon" class="fa-solid fa-chevron-down"></i>-->
-        </a></li>
+        <li><a href="shop.html">Shop</a></li>
         <li>
             <a href="#">
                 <i class="fa-solid fa-shopping-basket"></i> Panier (0)
@@ -32,54 +27,58 @@
     </ul>
   </nav>
 
-  <main>
+  
+  <main class="shop-container">
+      
     <section class="explore">
         <div class="search-bar">
-          <div class="dropdown">
+            <div class="dropdown">
                 <div id="drop-text" class="dropdown-text">
-                  <span id="span">Filtrer par :</span>
-                  <i id="icon" class="fa-solid fa-chevron-down"></i>
+                    <span id="span">Filtrer par :</span>
+                    <i id="icon" class="fa-solid fa-chevron-down"></i>
                 </div>
 
                 <ul id="list" class="dropdown-list">
-                        <li class="dropdown-list-item">ALL</li>
-                        <li class="dropdown-list-item">Age</li>
-                        <li class="dropdown-list-item">Scolaire</li>
-                        <li class="dropdown-list-item">Contes</li>
-                        <li class="dropdown-list-item">Romans</li>
-                        <li class="dropdown-list-item">Langues</li>
+                    <li class="dropdown-list-item">ALL</li>
+                    <li class="dropdown-list-item">Age</li>
+                    <li class="dropdown-list-item">Scolaire</li>
+                    <li class="dropdown-list-item">Contes</li>
+                    <li class="dropdown-list-item">Romans</li>
+                    <li class="dropdown-list-item">Langues</li>
                 </ul>
             </div>
          
             <div class="search-box">
-              <input type="text" id="search-input" placeholder="Chercher un livre/auteur"/>
-              <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Chercher un livre/auteur"/>
+                <i class="fa-solid fa-search"></i>
             </div>
         </div>
-
-        <div id="results-container" class="results-area">
-                    
-        </div>
-
      </section>
 
-     <footer>
-        <div class="footer-left">
-            <img src="images/logo.jpg"> 
-            <p>© 2026 Joy. Tous droits réservés.</p>
-
-        </div>
-        <div class="footer-right">
-            <h3>Suivez-nous sur nos réseaux sociaux</h3>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/p/Tous-contes-lus-100094260133410/"><img src="images/facebook.svg" alt="Facebook"></a>
-                <a href="https://www.instagram.com/tousconteslus16/"><img src="images/instagram.svg" alt="instagram"></a>
-            </div>
-
-        </div>
-      </footer>
+     <section class="catalog-section">
+         <div id="results-container" class="results-area">
+              
+         </div>
+     </section>
 
   </main>
 
-<script src="script.js"></script>
+  
+  <footer>
+    <div class="footer-left">
+        <img src="images/logo.jpg" alt="Logo Footer"> 
+        <p>© 2026 Joy. Tous droits réservés.</p>
+    </div>
+    <div class="footer-right">
+        <h3>Suivez-nous sur nos réseaux sociaux</h3>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="images/instagram.svg" alt="Instagram"></a>
+        </div>
+    </div>
+  </footer>
+
+  
+  <script src="script.js"></script>
+</body>
 </html>
