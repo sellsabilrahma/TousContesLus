@@ -15,7 +15,9 @@
         <img src="images/logo.jpg" alt="">
         <h1>Tous Contes Lus</h1>
      </div>
-
+     <!-- AJOUT : id="menu-toggle" pour cibler l'icône en JS -->
+     <i class="fa-solid fa-bars" id="menu-toggle"></i>
+     
      <ul class="navbar-menu-mobile">
         <li><a href="index.html">Accueil</a></li>
         <li><a href="shop.html">Shop</a></li>
@@ -25,9 +27,7 @@
 
      <ul class="navbar-menu">
         <li><a href="index.html">Accueil</a></li>
-
-        <li><a href="shop.html">Shop <!--<i id="icon" class="fa-solid fa-chevron-down"></i>--></a></li>
-
+        <li><a href="shop.html">Shop</a></li>
         <li>
             <a href="#">
                 <i class="fa-solid fa-shopping-basket"></i> Panier (0)
@@ -39,13 +39,12 @@
 
 
      <main>
-
      <!-- hero section-->
       <section class="hero">
         <div class="hero-left">
             <h1>Librairie spéciale enfants</h1>
             <p>Des merveilles dénichées spécialement pour le plaisir des petits passionnés de lecture</p>
-            <a href="shop.html" class="btn">Start Shoping</a>
+            <a href="shop.html" class="btn">Start Shopping</a>
         </div>
         <img src="images/hero.jpg" alt="Hero image">
       </section>
@@ -142,21 +141,18 @@
         <div class="footer-left">
             <img src="images/logo.jpg"> 
             <p>© 2026 Tous Contes Lus. Tous droits réservés.</p>
-
         </div>
         <div class="footer-right">
-            <h3>
-                Suivez-nous sur nos réseaux sociaux
-            </h3>
+            <h3>Suivez-nous sur nos réseaux sociaux</h3>
             <div class="social-icons">
                 <a href="https://www.facebook.com/p/Tous-contes-lus-100094260133410/"><img src="images/facebook.svg" alt="Facebook"></a>
                 <a href="https://www.instagram.com/tousconteslus16/"><img src="images/instagram.svg" alt="instagram"></a>
             </div>
-
         </div>
       </footer>
-
     </main>
-</body>
 
+    <!-- AJOUT : Liaison du script JavaScript juste avant la fermeture du body -->
+    <script src="script.js"></script>
+</body>
 </html>

@@ -546,7 +546,7 @@ footer {
 }
 
 /* Version mobile responsive */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     .contactUs {
         flex-direction: column !important;
         padding: 20px;
@@ -601,9 +601,86 @@ footer {
     font-size: 16px;
     font-weight: 500;
     }
+}*/
 
-   
+/* --- À AJOUTER EN DEHORS DE LA MEDIA QUERY (Pour les ordinateurs) --- */
+#menu-toggle {
+    display: none; /* Cache l'icône sur grand écran */
+    cursor: pointer;
+    font-size: 24px;
+    color: orange;
 }
+
+/* --- VOTRE BLOC MEDIA QUERY MODIFIÉ --- */
+@media (max-width: 768px) {
+    .contactUs {
+        flex-direction: column !important;
+        padding: 20px;
+    }
+    .contact-container {
+        padding: 0 20px 40px 20px;
+    }
+
+    .navbar {
+        padding: 1rem 1%; 
+        position: relative; /* Permet de positionner le menu mobile par rapport à la navbar */
+    }
+
+    #menu-toggle {
+        display: block; /* Affiche l'icône hamburger uniquement sur mobile */
+    }
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px; 
+        height: 100%; 
+    }
+
+    .navbar-logo img {
+        height: 100%;
+        width: auto;
+    }
+
+    .navbar-menu {
+        display: none; /* Cache le menu ordinateur sur mobile */
+    }
+
+    /* MODIFICATION : Changé display: flex en display: none pour cacher le menu par défaut */
+    .navbar-menu-mobile {
+        display: none; 
+        list-style: none;
+        position: absolute;
+        top: 100%; /* S'aligne parfaitement sous la navbar */
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1.1rem;
+        font-size: 1rem;
+        background-color: beige;
+        border-radius: 0 0 20px 20px;
+        padding: 1rem 0; /* Ajoute un peu d'espace interne */
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optionnel : ajoute une légère ombre */
+    }
+
+    /* AJOUT : Cette classe sera ajoutée par le JavaScript au clic */
+    .navbar-menu-mobile.active {
+        display: flex; 
+    }
+
+    .navbar-menu-mobile a {
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        text-decoration: none;
+        color: orange;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
 
 
 
