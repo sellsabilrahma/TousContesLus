@@ -656,10 +656,51 @@ footer {
     }
 }
 
-   
+/* --- Bloc d'information et carte --- */
+.contact-info-block {
+    display: flex;
+    flex-direction: column; /* Force l'alignement vertical : Titre -> Adresse -> Carte */
+    gap: 12px;              /* Espace régulier entre le titre, l'adresse et la carte */
+    width: 100%;
+    max-width: 500px;       /* Empêche la carte de devenir trop large sur grand écran */
+}
 
+.contact-info-block h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #003543;         /* Reprend la couleur de votre footer ou texte sombre */
+}
 
+.contact-info-block p {
+    font-size: 15px;
+    color: #555555;
+}
 
+.map-wrapper {
+    width: 100%;
+    border-radius: 16px;    /* Arrondit proprement les coins durs de la carte iframe */
+    overflow: hidden;       /* Obligatoire pour appliquer le border-radius à l'iframe */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Légère ombre pour donner du relief */
+    border: 1px solid wheat;
+}
+
+#google-map {
+    display: block;
+    width: 100%;
+}
+
+/* --- Ajustement pour l'affichage Mobile (< 768px) --- */
+@media (max-width: 768px) {
+    .contact-info-block {
+        max-width: 100%;     /* Permet à la carte de prendre toute la largeur sur mobile */
+        padding: 0 10px;
+    }
+    
+    #google-map {
+        height: 280px !important; /* Hauteur réduite sur mobile pour un défilement confortable */
+    }
+}
 
 
 }
