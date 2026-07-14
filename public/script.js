@@ -127,3 +127,4 @@ if (menuToggle && mobileMenu) {
         menuToggle.classList.toggle('fa-xmark');
     });
 }
+

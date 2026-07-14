@@ -545,64 +545,6 @@ footer {
     margin-right: 8px;
 }
 
-/* Version mobile responsive */
-/*@media (max-width: 768px) {
-    .contactUs {
-        flex-direction: column !important;
-        padding: 20px;
-    }
-    .contact-container {
-        padding: 0 20px 40px 20px;
-    }
-
-    .navbar {
-    padding: 1rem 1%; 
-    }
-
-    .navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 15px; 
-    height: 100%; 
-    }
-
-    .navbar-logo img {
-    height: 100%;
-    width: auto;
-    }
-
-    .navbar-menu {
-        display: none;
-    }
-
-    .navbar-menu-mobile {
-        display: block;
-        list-style: none;
-        position: absolute;
-        top: 80%;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 1.1rem;
-        font-size: 1rem;
-        background-color: beige;
-        border-radius: 0 0 20px 20px;
-    }
-
-    .navbar-menu-mobile a {
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 50px;
-    text-decoration: none;
-    color: orange;
-    font-size: 16px;
-    font-weight: 500;
-    }
-}*/
-
 /* --- À AJOUTER EN DEHORS DE LA MEDIA QUERY (Pour les ordinateurs) --- */
 #menu-toggle {
     display: none; /* Cache l'icône sur grand écran */
@@ -679,6 +621,47 @@ footer {
         font-size: 16px;
         font-weight: 500;
     }
+    
+    /* ==========================================================
+   4. DESIGN RESPONSIVE MOBILE (ÉCRANS INFERIEURS À 768px)
+   ========================================================== */
+@media (max-width: 768px) {
+    /* 1. On annule les largeurs minimales fixes sur le conteneur principal */
+    .search-bar {
+        flex-direction: column !important; /* Force le bouton et l'input l'un sous l'autre */
+        min-width: 0 !important;          /* Supprime les 700px qui faisaient déborder l'écran */
+        width: 100% !important;           /* Prend toute la largeur de l'écran */
+        background-color: transparent !important; /* Rend le fond transparent pour séparer les blocs */
+        gap: 15px !important;              /* Crée un espace vertical net de 15px entre les deux */
+    }
+
+    /* 2. On ajuste le bouton filtre (dropdown) pour qu'il devienne un bloc indépendant */
+    .dropdown {
+        width: 100% !important;           /* Prend 100% de la largeur */
+        border-radius: 25px !important;   /* Recrée un arrondi propre */
+    }
+
+    /* 3. On ajuste le bloc de saisie de texte */
+    .search-box {
+        width: 100% !important;           /* Prend 100% de la largeur sur sa propre ligne */
+        background-color: white !important; /* Redonne le fond blanc perdu */
+        border-radius: 25px !important;   /* Arrondit proprement la barre de recherche seule */
+        padding: 0 1.5rem !important;     /* Aligne le texte à l'intérieur */
+        border: 1px solid #ccc !important; /* Ajoute une fine bordure pour la structure */
+    }
+
+    /* 4. Gestion de la liste déroulante pour qu'elle s'ouvre sous le nouveau bouton plein écran */
+    .dropdown-list {
+        top: 3.5rem !important;
+    }
+}
+
+   
+
+
+
+
+
 }
 
 
